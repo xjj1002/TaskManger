@@ -52,5 +52,6 @@ public class MainActivity extends AppCompatActivity {
         pidArray.add("come on");
         pidArray.add("please");
         pidArray.add("work");
+        pidArray.add("work");
     }
 }
