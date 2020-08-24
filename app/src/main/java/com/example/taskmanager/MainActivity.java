@@ -12,10 +12,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.taskmanager.ui.main.SectionsPagerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    ListView pidView;
+    List pidArray = new ArrayList();
+    ArrayAdapter pidAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +46,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //pidView = (ListView)findViewById(R.id.pid_list);
+
+        pidArray.add("come on");
+        pidArray.add("please");
+        pidArray.add("work");
     }
 }
