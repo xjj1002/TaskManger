@@ -23,10 +23,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ListView pidView;
-    List pidArray = new ArrayList();
-    ArrayAdapter pidAdapter;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,25 +33,24 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = findViewById(R.id.fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        //pidView = (ListView)findViewById(R.id.pid_list);
-
-        pidArray.add("come on");
-        pidArray.add("please");
-        pidArray.add("work");
-        pidArray.add("work");
-        pidArray.add("work");
 
 
-        pidArray.add("work");
+        //finding the view by the list view id (pid_list)
+        pidView = (ListView)findViewById(R.id.pid_list);
+
+        //creating the array for the processes
+        ArrayList<String> pidList = new ArrayList<>();
+
+        //adding some string text for testing in the pid list
+        pidList.add("come on");
+        pidList.add("please");
+        pidList.add("work");
+        pidList.add("work");
+        pidList.add("work");
+
+        //source for ArrayAdapter:
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.activity_list_item,pidList);
+        pidView.setAdapter(arrayAdapter);
+
     }
 }
