@@ -22,7 +22,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView pidView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
 
-        //finding the view by the list view id (pid_list)
-        pidView = (ListView)findViewById(R.id.pid_list);
+
 
         //creating the array for the processes
         ArrayList<String> pidList = new ArrayList<>();
@@ -48,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
         pidList.add("work");
         pidList.add("work");
 
-        //source for ArrayAdapter:
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.activity_list_item,pidList);
-        pidView.setAdapter(arrayAdapter);
+
 
     }
 }
