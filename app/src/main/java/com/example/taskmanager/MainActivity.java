@@ -22,6 +22,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    ServicesClass service1;
 
 
     @Override
@@ -35,18 +36,13 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
 
-
+        service1 = new ServicesClass(1234,"test","Test Des","Running");
 
         //creating the array for the processes
-        ArrayList<String> pidList = new ArrayList<>();
+        ArrayList<ServicesClass> pidList = new ArrayList<>();
 
         //adding some string text for testing in the pid list
-        pidList.add("come on");
-        pidList.add("please");
-        pidList.add("work");
-        pidList.add("work");
-        pidList.add("work");
-
+        pidList.add(service1);
 
 
     }
